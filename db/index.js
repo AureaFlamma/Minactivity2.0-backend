@@ -1,3 +1,5 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import pg from "pg";
 
 export const pool = new pg.Pool({

@@ -7,7 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "db:createTimestampsTable": "node -r dotenv/config ./db/scripts/createTimestampsTable.js"
+    "db:createTimestampsTable": "node -r dotenv/config ./db/scripts/createTimestampsTable.js",
+    "db:addTimestamp": "node -r dotenv/config ./db/scripts/addTimestamp.js",
+    "db:getTimestamp": "node -r dotenv/config ./db/scripts/getTimestamp.js"
   },
   "repository": {
     "type": "git",

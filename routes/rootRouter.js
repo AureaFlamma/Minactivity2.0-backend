@@ -1,7 +1,6 @@
-import * as dotenv from "dotenv";
-dotenv.config();
 import express from "express";
 import getTimestamps from "../db/scripts/getTimestamp.js";
+import addTimestamp from "../db/scripts/addTimestamp.js";
 
 const router = express.Router();
 
@@ -11,9 +10,14 @@ router.get("/", async function (req, res) {
   res.json(result);
 });
 
-// router.get("/", async function (req, res) {
-//   console.log("get request coming thru");
-//   res.json({ boobs: "titties" });
-// });
+router.post("/", async function (req, res) {
+  const newTimestamp = req.body;
+  const result = await addTimestamp(newTimestamp);
+
+  res.json({
+    success: true,
+    payload: result,
+  });
+});
 
 export default router;

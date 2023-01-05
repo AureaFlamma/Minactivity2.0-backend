@@ -10,7 +10,7 @@ export default async function addTimestamp(newTimestamp) {
       newTimestamp.day,
       newTimestamp.month,
       newTimestamp.year,
-      newTimestamp.date.toString(),
+      newTimestamp.date,
     ]
   );
   return timestamp.rows;
